@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uni Student Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="unihub.png" alt="UniHub Logo" class="logo">
+        <div class="title">
+          <h1>Student Hub</h1>
+          <p>Quick info for students (timetables, facilities & events)</p>
+        </div>
+      </div>
+
+      <div class="pill" id="clockPill" title="Local time">
+        <span class="i">🕒</span>
+        <span id="clockText">--:--</span>
+      </div>
+    </header>
+
+    <main class="grid">
+      <!-- Left panel -->
+      <section class="panel" aria-label="Navigation panel">
+        <div class="head">
+          <h2>Menu</h2>
+          <span class="badge accent" id="activeBadge">Home</span>
+        </div>
+
+        <div class="btns">
+          <button class="cardBtn active" data-view="trains" aria-controls="view">
+            <div class="icon"><span class="i">🚆</span></div>
+            <div class="txt">
+              <strong>Trains timetable</strong>
+              <span>Example departures + platform info</span>
+            </div>
+          </button>
+
+          <button class="cardBtn" data-view="gym" aria-controls="view">
+            <div class="icon"><span class="i">🏋️</span></div>
+            <div class="txt">
+              <strong>Gym opening times</strong>
+              <span>Weekday & weekend hours</span>
+            </div>
+          </button>
+
+          <button class="cardBtn" data-view="library" aria-controls="view">
+            <div class="icon"><span class="i">📚</span></div>
+            <div class="txt">
+              <strong>Library opening times</strong>
+              <span>Term-time schedule + notes</span>
+            </div>
+          </button>
+
+          <button class="cardBtn" data-view="events" aria-controls="view">
+            <div class="icon"><span class="i">🎉</span></div>
+            <div class="txt">
+              <strong>Student events</strong>
+              <span>Societies, socials, workshops</span>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- Right panel -->
+      <section class="panel" aria-label="Content panel">
+        <div class="head">
+          <h2>Details</h2>
+          <span class="badge good" id="statusBadge">Updated today</span>
+        </div>
+
+        <div class="content" id="view">
+          <!-- JS injects content here -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      FASSAL 2026
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
